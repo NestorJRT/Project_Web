@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web project proposal for SDG 3: Good health and well-being.">
+  <title>Nappy | Web Project Proposal — SDG 3</title>
+  <style>
+    :root{--ink:#17233b;--muted:#60708d;--blue:#2f67c8;--teal:#16a693;--mint:#e9f8f4;--sky:#eef4ff;--line:#dce5f2;--paper:#fff;--bg:#f5f8fc;--shadow:0 18px 50px rgba(35,65,110,.10)}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .topbar{background:var(--ink);color:#fff;padding:12px 6vw;display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:.82rem;letter-spacing:.04em}.tag{color:#a9e6d9;text-transform:uppercase;font-weight:700}
+    main{max-width:1080px;margin:0 auto;padding:34px 22px 80px}.cover,.section{background:var(--paper);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:22px}.cover{padding:clamp(30px,6vw,76px);position:relative;overflow:hidden}.cover:after{content:"";position:absolute;width:340px;height:340px;border-radius:50%;background:var(--mint);right:-120px;top:-150px;z-index:0}.cover>*{position:relative;z-index:1}.eyebrow{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem}.cover h1{font-size:clamp(2.4rem,6vw,5.4rem);line-height:1.02;max-width:780px;margin:18px 0;color:var(--ink);letter-spacing:-.06em}.cover h1 span{color:var(--teal)}.lead{font-size:1.2rem;max-width:700px;color:var(--muted)}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}.pill{border:1px solid var(--line);padding:7px 13px;border-radius:999px;background:#fff;font-size:.88rem}.section{padding:clamp(24px,4vw,48px);margin-top:24px}.section h2{font-size:clamp(1.55rem,3vw,2.35rem);letter-spacing:-.035em;margin:0 0 15px}.section h3{font-size:1.15rem;margin:28px 0 6px;color:var(--blue)}.section p{max-width:880px}.num{font-size:.82rem;color:var(--teal);font-weight:800;letter-spacing:.12em}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:22px}.card{padding:20px;border:1px solid var(--line);border-radius:15px;background:#fbfdff}.card h3{margin:0 0 5px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.94rem}.quote{border-left:4px solid var(--teal);background:var(--mint);padding:18px 22px;margin:23px 0;border-radius:0 12px 12px 0}.mockup-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:center;margin-top:24px}.mockup{background:#17233b;border-radius:28px;padding:14px;max-width:380px;margin:auto;box-shadow:0 18px 35px rgba(23,35,59,.25)}.screen{background:#f8fbff;border-radius:18px;padding:18px;color:var(--ink)}.screen-head{display:flex;justify-content:space-between;align-items:center}.screen-title{font-weight:800;font-size:1.15rem}.avatar{width:31px;height:31px;border-radius:50%;background:#ccefe8;display:grid;place-items:center}.score{margin:16px 0;background:linear-gradient(135deg,#2f67c8,#16a693);border-radius:14px;color:#fff;padding:16px}.score strong{font-size:2rem;display:block;line-height:1}.bar{height:7px;background:#dbe8f7;border-radius:9px;margin-top:10px;overflow:hidden}.bar i{height:100%;display:block;background:#fff;border-radius:9px}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.mini{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.mini b{font-size:1.1rem;display:block}.mini small{color:var(--muted)}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}.flow-step{position:relative;text-align:center;background:var(--sky);padding:16px 9px;border-radius:12px;font-size:.9rem}.flow-step:not(:last-child):after{content:"→";position:absolute;right:-14px;top:31%;color:var(--teal);font-weight:800}.flow-step b{display:block;color:var(--blue);margin-bottom:3px}.list{padding-left:1.2rem}.list li{margin:7px 0}.footer{text-align:center;color:var(--muted);padding:30px 0 5px;font-size:.85rem}
+    @media(max-width:700px){.topbar{padding:11px 20px}.topbar .right{display:none}.grid,.mockup-wrap{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.flow-step:not(:last-child):after{content:"↓";right:45%;top:auto;bottom:-19px}.cover h1{font-size:3.1rem}.section{border-radius:16px}.mockup{max-width:340px}}
+    @media print{@page{size:landscape;margin:0}body,main{background:#fff!important}.topbar{display:none}main{padding:0;max-width:none}.cover,.section{box-shadow:none;border-radius:0;margin:0;padding:42px 6vw;min-height:8.5in;background:#fff!important;break-after:page;page-break-after:always}.cover{display:flex;flex-direction:column;justify-content:center}.section{break-inside:avoid;page-break-inside:avoid}.footer{display:none}.mockup-wrap,.card,.flow-step{break-inside:avoid;page-break-inside:avoid}}
+    /* Las tarjetas se ajustan a su contenido, sin alturas forzadas. */
+    .grid{align-items:start}.card{height:max-content}
+    /* Paleta propuesta: Prussian Blue, Deep Space Blue y Muted Teal. */
+    :root{--ink:#031D44;--muted:#04395E;--blue:#04395E;--teal:#70A288;--mint:#e8f1ec;--sky:#edf3f6;--line:#d1dde3}
+    body{background:#f7fafb}.mockup{background:#031D44;box-shadow:0 18px 35px rgba(3,29,68,.25)}.score{background:linear-gradient(135deg,#04395E,#70A288)}.avatar{background:#e8f1ec}.bar{background:#d1dde3}
+    .grid{grid-template-rows:repeat(2,minmax(145px,1fr))}.card{border:0;height:100%;padding:16px;background:#edf3f6}
+    .section,.cover{border:0}
+    .pill{border:0}
+    @media(max-width:700px){.grid{grid-template-rows:none}.card{height:auto}}
+  </style>
+</head>
+<body>
+  <main>
+    <header class="cover">
+      <div class="eyebrow">Sustainable Development Goal 03</div>
+      <h1>Nappy: small habits,<br><span>sustainable well-being.</span></h1>
+      <p class="lead">A web application that helps students track daily sleep, hydration, physical activity and mood to make informed self-care decisions.</p>
+      <div class="meta"><span class="pill">Project proposal</span><span class="pill">Group 6 · Nestor Ramirez and Alvaro Perez</span><span class="pill">August 27, 2026</span></div>
+    </header>
+
+    <section class="section"><span class="num">01 · INTRODUCTION</span><h2>Health is built every day</h2>
+      <p>The <strong>2030 Agenda</strong> brings together 17 goals to improve lives and protect the planet. <strong>SDG 3</strong> promotes healthy lives and well-being for everyone. Health is also built through daily habits: <strong>sleeping, staying hydrated, moving and recognizing our emotions</strong>.</p>
+      <p>University life makes these habits difficult to maintain. <strong>Nappy</strong> offers a simple, private tracker that turns daily data into awareness and small goals.</p>
+      <div class="quote">The app does not diagnose or replace health professionals; it supports habit-building and points users toward professional resources when needed.</div>
+    </section>
+
+    <section class="section"><span class="num">02 · RATIONALE</span><h2>Why did we choose SDG 3?</h2>
+      <p>We chose this goal because it is close to our community, and a website can help without special equipment. Tracking a few data points reveals <strong>patterns</strong> and makes it easier to get started.</p>
+      <div class="grid"><article class="card"><h3>Personal relevance</h3><p>Students directly face challenges involving <strong>sleep, stress and sedentary routines</strong>.</p></article><article class="card"><h3>Inclusive reach</h3><p>A <strong>responsive</strong> website works on phones, tablets and computers.</p></article><article class="card"><h3>Technical learning</h3><p>The project practices <strong>forms, data persistence, visualization and validation</strong>.</p></article><article class="card"><h3>Measurable impact</h3><p>We can measure <strong>registered days and completed goals</strong>.</p></article></div>
+    </section>
+
+    <section class="section"><span class="num">03 · PROBLEM</span><h2>Scattered information, blind decisions</h2>
+      <p>Many people want to take care of themselves but do not connect their <strong>habits</strong> with their energy and mood. Existing apps can be complex or split by habit, which becomes discouraging.</p>
+      <h3>Guiding question</h3><p><strong>How can we help students track and understand essential well-being habits without making self-care feel overwhelming?</strong></p>
+      <h3>Initial users</h3><p>Students aged 18 to 30 who have little time but want to improve their routines.</p>
+    </section>
+
+    <section class="section"><span class="num">04 · IDEA AND SCOPE</span><h2>Nappy: first version</h2>
+      <div class="mockup-wrap"><div><p>The home screen summarizes the day and lets users record each habit in a few taps. Users control their data and set gradual goals.</p><ul class="list"><li><strong>Profile</strong> and privacy.</li><li>Track <strong>sleep, water, exercise and mood</strong>.</li><li><strong>Weekly charts</strong> and goals.</li><li><strong>Responsive</strong> and accessible design.</li></ul></div>
+        <div class="mockup" aria-label="Sketch of Nappy's main screen"><div class="screen"><div class="screen-head"><span class="screen-title">Hi, Alex 👋</span><span class="avatar">✦</span></div><div class="score"><small>Your well-being today</small><strong>72 <small>/ 100</small></strong><div class="bar"><i style="width:72%"></i></div></div><div class="mini-grid"><div class="mini"><b>7 h 20 min</b><small>☾ Sleep</small></div><div class="mini"><b>5 / 8 glasses</b><small>♧ Water</small></div><div class="mini"><b>32 min</b><small>↗ Movement</small></div><div class="mini"><b>🙂 Good</b><small>Mood</small></div></div></div></div></div>
+      <h3>Interaction flow</h3><div class="flow"><div class="flow-step"><b>1 · Track</b>Enter quick data</div><div class="flow-step"><b>2 · Observe</b>Check your summary</div><div class="flow-step"><b>3 · Decide</b>Choose a goal</div><div class="flow-step"><b>4 · Improve</b>Review progress</div></div>
+    </section>
+
+    <section class="section"><span class="num">05 · DATA AND TECHNOLOGY</span><h2>A responsible, scalable solution</h2>
+      <div class="grid"><article class="card"><h3>Data collection</h3><p><strong>Daily forms</strong> for sleep, water, activity and mood, with optional fields.</p></article><article class="card"><h3>Visualization</h3><p><strong>Weekly charts, averages and streaks</strong> with accessible text.</p></article><article class="card"><h3>External sources</h3><p>Links to <strong>health organizations</strong>; APIs as an extension, not the main solution.</p></article><article class="card"><h3>Privacy</h3><p><strong>Local or fictional data</strong> in the prototype and clear consent for accounts.</p></article></div>
+    </section>
+
+    <section class="section"><span class="num">06 · EXPECTED BENEFITS</span><h2>Impact for people and community</h2>
+      <ul class="list"><li><strong>Self-awareness:</strong> connect habits, energy and mood.</li><li><strong>Measurable goals:</strong> turn intentions into small actions.</li><li><strong>Guidance:</strong> show professional resources when needed.</li><li><strong>Learning:</strong> design, test and iterate an accessible website.</li></ul>
+      <h3>Prototype evaluation metrics</h3><p>Completed entries, one-week return rate, achieved goals and a short usefulness and ease-of-use survey.</p>
+    </section>
+
+    <section class="section"><span class="num">07 · CONCLUSION</span><h2>From bold idea to useful prototype</h2>
+      <p><strong>Nappy</strong> connects SDG 3 with a concrete action: understanding our habits to better care for our health. We will begin by <strong>tracking and visualizing</strong>, then validate the idea with users and class feedback.</p>
+      <p><strong>Next step:</strong> interview students, define the data, create wireframes and prioritize the beta version.</p>
+    </section>
+    <div class="footer">Nappy · Academic project proposal · SDG 3: Good health and well-being</div>
+  </main>
+</body>
+</html>
