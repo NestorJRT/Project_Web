@@ -1,0 +1,163 @@
+/* Main colors */
+body {
+  background-color: #ffffff;
+  color: #082c59;
+  font-family: Arial, sans-serif;
+}
+
+.bg-primary {
+  background-color: #082c59 !important;
+}
+
+.section {
+  padding: 70px 0;
+}
+
+.section-light {
+  background-color: #f2f6f7;
+}
+
+.section-dark {
+  background-color: #061f40;
+  color: #ffffff;
+}
+
+.dashboard {
+  padding: 90px 0;
+}
+
+.small-title {
+  color: #4d8069;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: bold;
+}
+
+h1 span {
+  color: #79aa91;
+}
+
+h2 {
+  margin-bottom: 25px;
+  font-size: 42px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.dashboard p,
+.section p {
+  color: #48657b;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.section-dark p {
+  color: #d6e3e9;
+}
+
+.score-card {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #4d8069;
+  color: #ffffff;
+}
+
+.score-card p {
+  color: #ffffff;
+}
+
+.score-card strong {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 52px;
+}
+
+.score-card .progress {
+  margin-bottom: 15px;
+}
+
+.info-card {
+  margin-top: 15px;
+  padding: 20px;
+  border: 1px solid #d6e1e5;
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.info-card strong,
+.info-card span {
+  display: block;
+}
+
+.info-card strong {
+  font-size: 20px;
+}
+
+.info-card span {
+  color: #48657b;
+  font-size: 14px;
+}
+
+.card {
+  border: 1px solid #d6e1e5;
+  border-radius: 12px;
+}
+
+.message {
+  padding: 18px;
+  border-left: 5px solid #79aa91;
+  background-color: #e6f0eb;
+  color: #082c59;
+}
+
+.message strong {
+  color: #4d8069;
+}
+
+.privacy-card {
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #163a62;
+}
+
+.privacy-card h3 {
+  color: #ffffff;
+}
+
+.privacy-card p {
+  font-size: 14px;
+}
+
+footer {
+  background-color: #f2f6f7;
+  color: #48657b;
+}
+
+@media screen and (max-width: 767px) {
+  .section,
+  .dashboard {
+    padding: 50px 0;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .score-card {
+    margin-top: 25px;
+  }
+}
