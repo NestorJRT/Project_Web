@@ -13,6 +13,10 @@ body {
   padding: 70px 0;
 }
 
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 .section-light {
   background-color: #f2f6f7;
 }
@@ -67,12 +71,12 @@ h3 {
 .score-card {
   padding: 30px;
   border-radius: 20px;
-  background-color: #4d8069;
-  color: #ffffff;
+  background-color: #f2f6f7;
+  color: #082c59;
 }
 
 .score-card p {
-  color: #ffffff;
+  color: #48657b;
 }
 
 .score-card strong {
@@ -83,6 +87,11 @@ h3 {
 
 .score-card .progress {
   margin-bottom: 15px;
+  background-color: #d6e1e5;
+}
+
+.score-card .progress-bar {
+  background-color: #082c59;
 }
 
 .info-card {
@@ -136,11 +145,77 @@ h3 {
 
 .privacy-card p {
   font-size: 14px;
+  color: #d6e3e9;
+}
+
+.week-bars {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid #d6e1e5;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.week-bar-column {
+  display: flex;
+  flex: 1;
+  height: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+  color: #48657b;
+  font-size: 12px;
+}
+
+.week-bar {
+  width: min(36px, 70%);
+  min-height: 8px;
+  border-radius: 6px 6px 0 0;
+  background: #79aa91;
+  transition: height 0.2s ease;
+}
+
+.btn-primary,
+.btn-success {
+  border-color: #082c59;
+  background-color: #082c59;
+}
+
+.btn-primary:hover,
+.btn-success:hover,
+.btn-primary:focus,
+.btn-success:focus {
+  border-color: #061f40;
+  background-color: #061f40;
+}
+
+.btn-outline-primary {
+  border-color: #082c59;
+  color: #082c59;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  border-color: #082c59;
+  background-color: #082c59;
+  color: #ffffff;
 }
 
 footer {
   background-color: #f2f6f7;
   color: #48657b;
+}
+
+footer strong {
+  color: #082c59;
+}
+
+footer .btn-link {
+  color: #082c59;
 }
 
 @media screen and (max-width: 767px) {
